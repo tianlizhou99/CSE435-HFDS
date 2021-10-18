@@ -3,10 +3,10 @@
 
 Michael Dittman - Project Manager
 
-Tianli Zhou - Security Manager
+Tianli Zhou - Artifacts Manager
 
 Jason Harris - Project Facilitator
 
-Ethan Miller - Artifacts Manager
+Ethan Miller - Security Manager
 
 Jesse Stroster - Domain Expert
