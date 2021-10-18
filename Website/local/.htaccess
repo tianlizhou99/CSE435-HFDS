@@ -4,4 +4,11 @@ AuthName "Roaming Access"
 AuthLDAPURL ldap://ds.cse.msu.edu:389/ou=People,dc=cse,dc=msu,dc=edu?uid?sub
 AuthLDAPGroupAttribute memberUid
 AuthLDAPGroupAttributeIsDN off
-require user {zhouti17, dittmanm, stroste3, harr1531, mill2904, chengb, chanken1, langfo37}
+Require user zhouti17 
+Require user dittmanm
+Require user stroste3
+Require user harr1531
+Require user mill2904
+Require user chengb
+Require user chanken1
+Require user langfo37
