@@ -1,78 +1,104 @@
 <!DOCTYPE html>
+<!--Website created by Tianli Zhou (team 4) for the CSE 435 group project HFDS-->
 <html>
 	<head>
 		<title>HFDS4</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<h1>CSE 435: Hands Free Driving System (HFDS) Team 4</h1>
-		<div class="row" style="display: flex; padding-left: 20px; padding-right: 20px;">
-			<div class="column" style="flex: 20%; border:1px solid white;"><h3 style="text-align:center;">Public links</h2></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="https://www.cse.msu.edu/~cse435/Projects/F2021/ProjectDescriptions/2021-HFDS-GM-Davenport">Full Project Description</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Software Requirements Specification Sheet</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Prototype</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Bibliography</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="http://www.cse.msu.edu/~chengb/">Instructor: Dr. Betty H.C. Cheng</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="https://cse.msu.edu/~cse435/">Course Website</a></h3></div>
-		</div>
-		<div class="row" style="display: flex; padding-left: 20px; padding-right: 20px;">
-			<div class="column" style="flex: 20%; border:1px solid white;"><h3 style="text-align:center;">Private links</h2></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="local/meetingminutes.html">Meeting Information</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Milestone and Deadlines</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Drafts</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Forum</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Customer response</a></h3></div>
-			<div class="column" style="flex: 10%; border:1px solid white;"><h3 style="padding-left:5px;"><a href="">Miscellaneous</a></h3></div>
-		</div>
-		<h2>Project Background</h2>
-		<p>
-			The objective of this project is to develop a system that is capable of hands-free highway driving. The
-			system will allow drivers to enable a hands-free assisted driving feature which will drive the vehicle in its
-			existing lane without needing to control the steering wheel.
-		</p>
-		<h2>Project Description</h2>
-		<p>
-			The HFDS system allows a vehicle to automatically steer, accelerate and brake in certain highway
-			conditions. Once activated, the driver can remove their hands from the wheel and is continuously
-			monitored to ensure active engagement with the road. Warnings are issued if 1) the system needs the
-			driver to reclaim control, 2) The driver is deemed distracted.
-		</p>
-		<p>	
-			The driver must first be driving on a highway that has been enabled by the Path Prediction Subsystem.
-			The Driver Assist System validates road conditions, current trajectory, sensor input, and predicted path. If
-			the current trajectory is deemed safe, the user can opt to enter hands-free mode. Once engaged, the user
-			can remove their hands from the steering wheel. The vehicle will enter an adaptive cruise control state
-			and stay within its existing lane for the duration of the session.
-		</p>
-		<p>	
-			When engaged, the Driver Attention System monitors the driver's eyes and head movements to ensure
-			proper engagement with the road. Camera monitoring should work in all lighting conditions. The system
-			can identify if the driver is not properly engaged with the road. If this occurs, various warnings are issued
-			to the driver. A final warning will send vibrations to the driver to reengage. If the system identifies the
-			driver as inactive, the system aborts hands-free mode and if needed, the vehicle will come to a stop.
-		</p>
-		<p>
-			Besides attentive eyes and head placement, driver interaction is not required. However, the driver can
-			intervene and regain control of the vehicle by either controlling the steering wheel, braking, or throttle.
-		</p>
+		<div class="main_wrapper">
+			<div class="headers">
+				<h1>CSE 435: Hands Free Driving System (HFDS) Team 4</h1>
+			</div>
+			<div class="block">
+				<div class="row" style="display: flex;">
+					<div class="column" style="flex: 20%; border:4px outset #404040;"><h3 style="text-align:center;">Public links</h2></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="https://www.cse.msu.edu/~cse435/Projects/F2021/ProjectDescriptions/2021-HFDS-GM-Davenport">Full Project Description</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Software Requirements Specification Sheet</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Prototype</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Bibliography</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="http://www.cse.msu.edu/~chengb/">Instructor: Dr. Betty H.C. Cheng</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="https://cse.msu.edu/~cse435/">Course Website</a></h3></div>
+				</div>
+				<div class="row" style="display: flex;">
+					<div class="column" style="flex: 20%; border:4px outset #404040;"><h3 style="text-align:center;">Private links</h2></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="local/meetingminutes.html">Meeting Information</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Milestone and Deadlines</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Drafts</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Forum</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Customer response</a></h3></div>
+					<div class="column" style="flex: 10%; border:4px outset #404040;"><h3 style="padding-left:8px;"><a href="404.html">Miscellaneous</a></h3></div>
+				</div>
+			</div>
+			<div class="headers">
+				<h2>Project Background</h2>
+			</div>
+			<div class="block">
+				<p>
+					The objective of this project is to develop a system that is capable of hands-free highway driving. The
+					system will allow drivers to enable a hands-free assisted driving feature which will drive the vehicle in its
+					existing lane without needing to control the steering wheel.
+				</p>
+			</div>
+			<div class="headers">
+				<h2>Project Description</h2>
+			</div>
+			<div class="block">
+				<p>
+					The HFDS system allows a vehicle to automatically steer, accelerate and brake in certain highway
+					conditions. Once activated, the driver can remove their hands from the wheel and is continuously
+					monitored to ensure active engagement with the road. Warnings are issued if:
+				</p>
+				<ul style="list-style-type:none;">
+					<li>1) The system needs the driver to reclaim control</li>
+					<li>2) The driver is deemed distracted.</li>
+				</ul>
+				<p>	
+					The driver must first be driving on a highway that has been enabled by the Path Prediction Subsystem.
+					The Driver Assist System validates road conditions, current trajectory, sensor input, and predicted path. If
+					the current trajectory is deemed safe, the user can opt to enter hands-free mode. Once engaged, the user
+					can remove their hands from the steering wheel. The vehicle will enter an adaptive cruise control state
+					and stay within its existing lane for the duration of the session.
+				</p>
+				<p>	
+					When engaged, the Driver Attention System monitors the driver's eyes and head movements to ensure
+					proper engagement with the road. Camera monitoring should work in all lighting conditions. The system
+					can identify if the driver is not properly engaged with the road. If this occurs, various warnings are issued
+					to the driver. A final warning will send vibrations to the driver to reengage. If the system identifies the
+					driver as inactive, the system aborts hands-free mode and if needed, the vehicle will come to a stop.
+				</p>
+				<p>
+					Besides attentive eyes and head placement, driver interaction is not required. However, the driver can
+					intervene and regain control of the vehicle by either controlling the steering wheel, braking, or throttle.
+				</p>
+			</div>
 
-		<h2>Team composition</h2>
-		<div class="row" style="display: flex;">
-			<div class="column" style="flex: 33%;">
-				<h3><a href="https://cse.msu.edu/~dittmanm/">Project Manager: Michael Dittman</a></h3>
-				<p>Photo placeholder</p>
-				<h3><a href="https://cse.msu.edu/~harr1531/">Project Facilitator: Jason Harris</a></h3>
-				<img src="images/photo-Jason.jpeg">
+			<div class="headers">
+				<h2>Team composition</h2>
 			</div>
-			<div class="column" style="flex: 33%;">
-				<h3><a href="https://cse.msu.edu/~stroste3/">Domain Expert: Jesse Stroster</a></h3>
-				<p>Photo placeholder</p>
-				<h3><a href="https://cse.msu.edu/~mill2904/">Security Manager: Ethan Miller</a></h3>
-				<img src="images/photo-Ethan.jpg">
-			</div>
-			<div class="column"style="flex: 33%;">
-				<h3><a href="https://cse.msu.edu/~zhouti17/">Artifacts Manager: Tianli Zhou</a></h3>
-				<img src="images/photo-Tianli.jpeg">
+			<div class="block">
+				<div class="row" style="display: flex;">
+					<div class="column" style="flex: 20%;">
+						<h3><a href="https://cse.msu.edu/~dittmanm/">Project Manager: Michael Dittman</a></h3>
+						<p>Photo placeholder</p>
+					</div>
+					<div class="column" style="flex: 20%;">
+						<h3><a href="https://cse.msu.edu/~harr1531/">Project Facilitator: Jason Harris</a></h3>
+						<img src="images/photo-Jason.jpeg">
+					</div>
+					<div class="column" style="flex: 20%;">
+						<h3><a href="https://cse.msu.edu/~stroste3/">Domain Expert: Jesse Stroster</a></h3>
+						<p>Photo placeholder</p>
+					</div>
+					<div class="column" style="flex: 20%;">
+						<h3><a href="https://cse.msu.edu/~mill2904/">Security Manager: Ethan Miller</a></h3>
+						<img src="images/photo-Ethan.jpg">
+					</div>
+					<div class="column"style="flex: 20%;">
+						<h3><a href="https://cse.msu.edu/~zhouti17/">Artifacts Manager: Tianli Zhou</a></h3>
+						<img src="images/photo-Tianli.jpeg">
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>

@@ -1,9 +1,14 @@
 body {
+	padding: 1%;
+	background-image: url("images/background.png");
+}
+
+.main_wrapper{
+	border: 2px solid #212121;
 	background-color: #404040;
 }
 
 * {
-	padding-left: 5px;
 	font-family: "Times New Roman", Times, serif;
 	color: #c9c9c9;
 }
@@ -15,18 +20,32 @@ h1 {
 
 h2 {
 	font-size:2vw;
-	color: #adadad
+	color: #adadad;
+	padding-left: 5px;
 }
 
-p {
+p, li {
 	font-size:1vw;
-	color:#FFFFFF;
-	text-indent: 50px;
-	width: 75%;
+	color:#DDDDDD;
+	
+	padding-right: 5px;
+}
+
+li {
+	padding-left: 40px;
 }
 
 img {
 	width: 25%;
 }
 
+.headers {
+	border: 4px outset #212121;
+}
 
+.block {
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #212121;
+}
