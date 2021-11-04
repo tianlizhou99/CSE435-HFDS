@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Milestone and Deadlines</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="main_wrapper">
+			<div class="headers"><h1>Milestone and Deadlines</h1></div>
+			<div class="headers" style="text-align:center;"><h2>Tasks</h2></div>
+			<div class="block">
+				<div class="row" style="display: flex;">
+					<div class="column" style="flex: 33%; border:4px outset #404040;">
+						<p>Planned</p>
+					</div>
+					<div class="column" style="flex: 33%; border:4px outset #404040;">
+						<p>Ongoing</p>
+					</div>
+					<div class="column" style="flex: 33%; border:4px outset #404040;">
+						<p>Complete</p>
+					</div>
+				</div>
+			</div>
+			<div class="block">
+				<form action="tasks.txt" method="post" style="text-align:center; border:4px outset #404040; padding: 4px; width: 25%; margin:auto;">
+					<label for="task">Task name: </label>
+					<input type="text" id="task" name="task"><br><br>
+					<label for="description">Description: </label>
+					<input type="text" id="description" name="description"><br><br>
+					<label for="owner">Owner: </label>
+					<input type="text" id="owner" name="owner"><br><br>
+					<input type="submit" value="Submit">
+					
+					<!-- <?php
+					function writetotasks()
+					{
+						$myfile = fopen("tasks.txt", "w") or die("Unable to open file!");
+						$txt = <?php $_POST["task"]; ?>;
+						fwrite($myfile, $txt);
+						fclose($myfile);
+					}
+					?> 
+					-->
+				</form>
+			</div>
+			<div class="headers" style="text-align:center;"><h2>Deadlines</h2></div>
+			<div class="block">
+					<img style="margin:auto; display:block;" src="../images/deadlines.png">
+			</div>
+		</div>
+	</body>
+</html>
