@@ -76,6 +76,7 @@ class mainScene extends Phaser.Scene
                 setTimeout(() => {this.textDisplay.text.text = "No Input\nDetected";}, 5000);
                 setTimeout(() => {this.textDisplay.text.text = "Halting...";}, 7000);
                 setTimeout(() => {state = stateStopHFDSOff;}, 8000);
+                setTimeout(() => {this.textDisplay.text.text = "HDFS Off";}, 8000);
                 console.log('Fault', state);
             }
 		}, this);
