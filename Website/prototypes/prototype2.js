@@ -204,14 +204,11 @@ class mainScene extends Phaser.Scene
                             }
                             else
                             {
+                                state = stateGoHFDSOn;
+                                this.textDisplay.HFDSText.text = "HDFS On";   
                                 if(raining > 0)
                                 {
                                     this.rainDetect();
-                                }
-                                else
-                                {
-                                    state = stateGoHFDSOn;
-                                    this.textDisplay.HFDSText.text = "HDFS On";   
                                 }
                             }
                         }
@@ -369,24 +366,24 @@ class mainScene extends Phaser.Scene
         console.log(this.oCar.z);
         if(oCar)
         {
-            if(!(Math.abs(this.oCar.z - this.user.z)%19500 < 500))
+            if(!(Math.abs(this.oCar.z - this.user.z)%19500 < 100))
             {
                 this.oCar.update(dt);
             }
-            if(Math.abs(this.user.z - this.oCar.z)%19800 < 200)
+            if(Math.abs(this.user.z - this.oCar.z)%19800 < 100)
             {
                 state = stateCrash;
             }
             else if(Math.abs(this.user.z - this.oCar.z)%15000 < 5000)
             {
-                this.oCarSprite.setScale(1/(Math.abs(this.oCar.z - this.user.z)%10000/ 100));
-                if(1/((this.oCar.z - this.user.z) / 10000) < 130)
+                this.oCarSprite.setScale(1/(Math.abs(this.oCar.z - this.user.z)/ (100*screenWidth/1920)));
+                if(1/((this.oCar.z - this.user.z) / (10000*screenWidth/1920)) < (275*screenWidth/1920))
                 {
-                    this.oCarSprite.setY(130);
+                    this.oCarSprite.setY(275*screenWidth/1920);
                 }
                 else
                 {
-                    this.oCarSprite.setY(1/((this.oCar.z - this.user.z) / 10000));
+                    this.oCarSprite.setY(1/((this.oCar.z - this.user.z) / (10000*screenWidth/1920)));
                 }
             }
             else
