@@ -1,3 +1,6 @@
+//Made by Tianli Zhou
+//Adapted from Jake S. Gordon's code: https://github.com/jakesgordon/javascript-racer.
+
 const screenWidth = window.innerWidth;
 const screenHeight = (screenWidth * 9)/16;
 const screenCenterY = screenHeight/2;
@@ -45,6 +48,7 @@ class mainScene extends Phaser.Scene
 		}, this);
         this.input.keyboard.on('keydown-B', function(){
 			state = stateStopHFDSOff;
+            this.textDisplay.text.text = "HDFS Off";
             console.log('Brake', state);
 		}, this);
         this.input.keyboard.on('keydown-H', function(){

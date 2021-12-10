@@ -68,8 +68,8 @@ class mainScene extends Phaser.Scene
             frameRate: 15,
             repeat: -1
         });
-        this.rain = this.add.sprite(screenCenterX, 0, 'rain').play('raining').setAlpha(0);
-        this.rainHeavy = this.add.sprite(screenCenterX, 0, 'rain').play('raining2').setAlpha(0);
+        this.rain = this.add.sprite(screenCenterX, screenCenterY, 'rain').play('raining').setAlpha(0);
+        this.rainHeavy = this.add.sprite(screenCenterX, screenCenterY, 'rain').play('raining2').setAlpha(0);
 
         this.warningSound = this.sound.add('warning');
         var rainSound = this.sound.add('rainSound');
@@ -110,7 +110,7 @@ class mainScene extends Phaser.Scene
                 case stateGoHFDSOn:
                 case stateRainHFDSOn:
                     state = stateGoHFDSOff;
-                    this.textDisplay.HFDSText.text = "HDFS Off";
+                    this.textDisplay.HFDSText.text = "HFDS Off";
                 case stateGoHFDSOff:
                     if(this.user.speed + 250 >= this.user.maxSpeed)
                     {
@@ -130,7 +130,7 @@ class mainScene extends Phaser.Scene
                 case stateGoHFDSOn:
                 case stateRainHFDSOn:
                     state = stateGoHFDSOff;
-                    this.textDisplay.HFDSText.text = "HDFS Off";
+                    this.textDisplay.HFDSText.text = "HFDS Off";
                 case stateGoHFDSOff:
                     if(this.user.speed - 250 <= 0)
                     {
@@ -151,7 +151,7 @@ class mainScene extends Phaser.Scene
                 case stateGoHFDSOn:
                 case stateRainHFDSOn:
                     state = stateGoHFDSOff;
-                    this.textDisplay.HFDSText.text = "HDFS Off";
+                    this.textDisplay.HFDSText.text = "HFDS Off";
                 case stateGoHFDSOff:
                     this.user.x -= 0.02;
                     break;
@@ -164,7 +164,7 @@ class mainScene extends Phaser.Scene
                 case stateGoHFDSOn:
                 case stateRainHFDSOn:
                     state = stateGoHFDSOff;
-                    this.textDisplay.HFDSText.text = "HDFS Off";
+                    this.textDisplay.HFDSText.text = "HFDS Off";
                 case stateGoHFDSOff:
                     this.user.x += 0.02;
                     break;
@@ -175,13 +175,13 @@ class mainScene extends Phaser.Scene
             if(state != stateCrash)
             {
                 state = stateStopHFDSOff;
-                this.textDisplay.HFDSText.text = "HDFS Off";
+                this.textDisplay.HFDSText.text = "HFDS Off";
                 setTimeout(() => {this.user.speed = this.user.speed * 0.75;}, 333);
                 setTimeout(() => {this.textDisplay.speedText.text = (Math.floor(this.user.speed * 0.75 / 50)).toString() + ' MPH';}, 334);
                 setTimeout(() => {this.user.speed = this.user.speed * 0.25;}, 666);
                 setTimeout(() => {this.textDisplay.speedText.text = (Math.floor(this.user.speed * 0.75 * 0.25 / 50)).toString() + ' MPH';}, 667);
                 setTimeout(() => {this.user.speed = 0;}, 1000);
-                setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 1000);
+                setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 1000);
             }
             driverAttention = 1;
 		}, this);
@@ -194,18 +194,18 @@ class mainScene extends Phaser.Scene
                         if(this.user.speed < 1000)
                         {
                             this.textDisplay.HFDSText.text = "Car must be\ngoing at least\n20MPH for HFDS\nto activate";
-                            setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 2000);
+                            setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 2000);
                         }
                         else{
                             if(Math.abs(this.user.x) > 1)
                             {
                                 this.textDisplay.HFDSText.text = "Blue Path\nNot Detected";
-                                setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 2000);
+                                setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 2000);
                             }
                             else
                             {
                                 state = stateGoHFDSOn;
-                                this.textDisplay.HFDSText.text = "HDFS On";   
+                                this.textDisplay.HFDSText.text = "HFDS On";   
                                 if(raining > 0)
                                 {
                                     this.rainDetect();
@@ -215,19 +215,19 @@ class mainScene extends Phaser.Scene
                         break;
                     case stateRainHFDSOn:
                     case stateGoHFDSOn:
-                        this.textDisplay.HFDSText.text = "HDFS Off";
+                        this.textDisplay.HFDSText.text = "HFDS Off";
                         state = stateGoHFDSOff;
                         break;
                     case stateStopHFDSOff:
                         this.textDisplay.HFDSText.text = "Car must be\ngoing at least\n20MPH for HFDS\nto activate";
-                        setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 2000);
+                        setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 2000);
                         break;
                 }
             }
             else
             {
                 this.textDisplay.HFDSText.text = "Pay Attention";
-                setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 2000);
+                setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 2000);
             }
 		}, this);
         this.input.keyboard.on('keydown-T', function(){
@@ -298,7 +298,7 @@ class mainScene extends Phaser.Scene
         this.input.keyboard.on('keydown-F', function(){
             if(state == stateGoHFDSOn){
                 state = stateHFDSFault;
-                this.textDisplay.HFDSText.text = "HDFS Faulted";
+                this.textDisplay.HFDSText.text = "HFDS Faulted";
                 this.warning();
             }
 		}, this);
@@ -456,7 +456,7 @@ class mainScene extends Phaser.Scene
                 setTimeout(() => {this.textDisplay.HFDSText.text = "Driver is\nAttentive";}, 5000);
                 setTimeout(() => {this.textDisplay.HFDSText.text = "Switching to\nManual Controls";}, 7000);
                 setTimeout(() => {state = stateGoHFDSOff;}, 8000);
-                setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 8000);
+                setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 8000);
                 setTimeout(() => {this.filter.setAlpha(0);}, 8000);
             }
             else
@@ -464,7 +464,7 @@ class mainScene extends Phaser.Scene
                 setTimeout(() => {this.textDisplay.HFDSText.text = "Driver is not\nAttentive";}, 5000);
                 setTimeout(() => {this.textDisplay.HFDSText.text = "Pulling Over...";}, 7000);
                 setTimeout(() => {state = stateStopHFDSOff;}, 8000);
-                setTimeout(() => {this.textDisplay.HFDSText.text = "HDFS Off";}, 8000);
+                setTimeout(() => {this.textDisplay.HFDSText.text = "HFDS Off";}, 8000);
                 if(this.user.x >= 0)
                 {
                     var remain = (1.24 - this.user.x)/1000;
